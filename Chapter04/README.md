@@ -6,3 +6,6 @@ Berisi hasil kegiatan praktikum Chapter04-Tipe Data Statis, Operator, dan Assign
 4. File latihan04-perjalanan.py berisi kode perintah menghitung perkiraan waktu sampai ke kota tujuan
 5. File latihan05-diagram.py berisi kode perintah membuat diagram horizontal perbandingan jumlah mahasiswa laki-laki dan perempuan PTIK UNS 
 
+terdapat juga file praktikum.pynb yang berisi file hasil praktikum 1 dan 2 dengan jupyter notebook
+
+
