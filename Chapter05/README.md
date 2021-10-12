@@ -11,3 +11,5 @@ Berisi hasil kegiatan praktikum Chapter05- statement control oleh Viola Clara Ci
 9. latihan2_Bintang berisi program menampilkan formasi bintang menurun ke bawah sesuai baris yang diisikan
 10. latihan2_TebakAngka berisi program tebak angka
 11. latihan2_TebakAngka2 berisi program tebak angka desertai score
+
+dan juga dua file hasil praktikum
