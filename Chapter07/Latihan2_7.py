@@ -23,7 +23,7 @@ try:
         while jawaban!='y' and jawaban!='n':
             print("Hanya masukan y/n")
             tambahlagi()
-    file.close()
+    fileDibuka.close()
 except FileNotFoundError:
     print("Maaf nama file dan/atau path salah")
 
