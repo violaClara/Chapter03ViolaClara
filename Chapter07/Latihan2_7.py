@@ -1,3 +1,4 @@
+#program untuk memberi tambahan data pada suatu file, bila tidak ada akan membuat file baru
 def tambahlagi():
     global jawaban
     jawaban= input("Lagi (y/n)? : ")
