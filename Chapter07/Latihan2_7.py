@@ -21,9 +21,13 @@ try:
             break
         
     #bila jawaban user selain y atau n
-        while jawaban!='y' and jawaban!='n':
+        elif jawaban!='y' and jawaban!='n':
             print("Hanya masukan y/n")
             tambahlagi()
+            if jawaban=='y':
+                continue
+            elif jawaban =='n':
+                break
     fileDibuka.close()
 except FileNotFoundError:
     print("Maaf nama file dan/atau path salah")

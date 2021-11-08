@@ -15,29 +15,35 @@ while True:
         if namaBuah in buah.keys():
             print("buah sudah ada")
             break
-        hargaSatuan= int(input("Masukkan harga satuan :"))
-        buah[namaBuah]=hargaSatuan
+        try:
+            hargaSatuan= int(input("Masukkan harga satuan :"))
+            buah[namaBuah]=hargaSatuan
 
-        #keys dan value dijadikan list
-        keys= list(buah.keys())
-        valu= list(buah.values())
+            #keys dan value dijadikan list
+            keys= list(buah.keys())
+            valu= list(buah.values())
 
-        #menampilkan data buah
-        print("Data buah: ")
-        for i in range(len(buah)):
-            print ("- {} (Harga Rp {}) " .format(keys[i], valu[i]))
+            #menampilkan data buah
+            print("Data buah: ")
+            for i in range(len(buah)):
+                print ("- {} (Harga Rp {}) " .format(keys[i], valu[i]))
+        except ValueError:
+            print("Maaf hanya masukan angka")
         
 #Menu B
     elif pilihan=='B' or pilihan=='b':
         hargaSemua=[]
         def belanjaBuah(buah):
-            beliBuah= input("Nama buah yang dibeli 	:")
-            if beliBuah in buah:
-                kg=int(input("Berapa Kg		:"))
-            else:
-                print("Maaf buah tidak tersedia")
-            print('-----------------------------')
-            hargaSemua.append(buah[beliBuah]*kg)
+            try:
+                beliBuah= input("Nama buah yang dibeli 	:")
+                if beliBuah in buah:
+                    kg=int(input("Berapa Kg		:"))
+                    print('-----------------------------')
+                hargaSemua.append(buah[beliBuah]*kg)
+            except KeyError:
+                print("maaf buah tidak tersedia")
+            except ValueError:
+                print("Maaf hanya masukan angka")
 
         def tambahlagi():
             global jawaban
@@ -48,6 +54,14 @@ while True:
             if jawaban=='y':
                 continue
             elif jawaban =='n':
+                    break
+            #bila jawaban user selain y atau n
+            elif jawaban!='y' and jawaban!='n':
+                print("Hanya masukan y/n")
+                tambahlagi()
+                if jawaban=='y':
+                    continue
+                elif jawaban =='n':
                     break
         total= sum(hargaSemua)
         print("Total Harga: ", total)

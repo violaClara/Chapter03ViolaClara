@@ -1,11 +1,10 @@
 #program mengurutkan nama mahasiswa beserta menampilkan banyaknya karakter
 
-
-
 # input berupa nama mahasiswa (string) sebanyak n data
 namaMahasiswa=[]
 while True:
     namaInput= input("Masukan nama Mahasiswa: ")
+#bila nama selanjutnya tidak diisi maka inputan berakhir
     if namaInput=='':
         break
     namaMahasiswa.append(namaInput)

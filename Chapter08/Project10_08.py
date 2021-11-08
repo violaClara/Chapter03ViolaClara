@@ -1,14 +1,20 @@
 # pembelian beberapa jenis buah sekaligus
 hargaSemua=[]
-def belanjaBuah(buah):
-    beliBuah= input("Nama buah yang dibeli 	:")
-    if beliBuah in buah:
-        kg=int(input("Berapa Kg		:"))
-    else:
-        print("Maaf buah tidak tersedia")
-    print('-----------------------------')
-    hargaSemua.append(buah[beliBuah]*kg)
 
+#fungsi untuk mengihitung total harga belanjaan
+def belanjaBuah(buah):
+    try: 
+        beliBuah= input("Nama buah yang dibeli 	:")
+        if beliBuah in buah:
+            kg=int(input("Berapa Kg		:"))
+            print('-----------------------------')
+        hargaSemua.append(buah[beliBuah]*kg)
+    except KeyError:
+        print("maaf buah tidak tersedia")
+    except ValueError:
+        print("Maaf hanya masukan angka")
+
+#fungsi menanyakan barang tambahan
 def tambahlagi():
     global jawaban
     jawaban= input("Lagi (y/n)? : ")
@@ -21,6 +27,15 @@ while True:
     if jawaban=='y':
         continue
     elif jawaban =='n':
+        break
+    #bila jawaban user selain y atau n
+    elif jawaban!='y' and jawaban!='n':
+        print("Hanya masukan y/n")
+        tambahlagi()
+        if jawaban=='y':
+            continue
+        elif jawaban =='n':
             break
+
 total= sum(hargaSemua)
 print("Total Harga: ", total)

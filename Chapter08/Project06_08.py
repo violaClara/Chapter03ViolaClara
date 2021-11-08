@@ -2,9 +2,11 @@
 def sortStringByChar(kata):
     kata.sort(reverse=True , key=len)
     return kata
-
-kata=['apel', 'rambutan', 'jeruk']
-print(sortStringByChar(kata))
+try:
+    kata=['apel', 'rambutan', 'jeruk']
+    print(sortStringByChar(kata))
+except TypeError:
+    print("Maaf ada data yang bukan string")
 
 
 

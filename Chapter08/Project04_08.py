@@ -13,7 +13,10 @@ while True:
 
     if pilihan=='A' or pilihan=='a':
         tambahanSayur= input("Masukan nama sayur: ")
-        dataSayur.append(tambahanSayur)
+        if tambahanSayur not in dataSayur:
+            dataSayur.append(tambahanSayur)
+        else:
+            print("Maaf nama sayur sudah ada")
     elif pilihan=='B' or pilihan=='b':
         hapusSayur=input("Masukan sayur yang akan dihapus: ")
         if hapusSayur in dataSayur:
